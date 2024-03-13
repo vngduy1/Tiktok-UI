@@ -14,6 +14,7 @@
 .inner {
     height: 100%;
     width: var(--default-layout-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,5 +97,27 @@
     }
 }
 
-// .actions {
-// }
+.more-btn {
+    font-size: 2rem;
+    margin-left: 24px;
+    padding: 4px 8px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu-items {
+    width: 224px;
+}
+
+@media (max-width: 739px) {
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+    }
+    .search,
+    .actions {
+        display: none;
+    }
+}
