@@ -9,6 +9,7 @@ function Button({
     href,
     primary = false,
     outline = false,
+    normal = false,
     large = false,
     small = false,
     rounded = false,
@@ -46,6 +47,7 @@ function Button({
         [className]: className,
         primary,
         outline,
+        normal,
         text,
         small,
         large,
@@ -56,7 +58,7 @@ function Button({
         <Comp className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon} </span>}
             <span className={cx('title')}>{children}</span>
-            {leftIcon && <span className={cx('icon')}>{rightIcon} </span>}
+            {rightIcon && <span className={cx('icon')}>{rightIcon} </span>}
         </Comp>
     );
 }
