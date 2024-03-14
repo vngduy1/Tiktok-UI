@@ -68,6 +68,15 @@
     }
 }
 
+.normal {
+    color: var(--black);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
 .text {
     &:hover {
         text-decoration: underline;
