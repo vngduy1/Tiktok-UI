@@ -24,6 +24,7 @@ import { UploadIcon, InboxIcon, MessagesIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from './Search';
 import { Link } from 'react-router-dom';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -107,7 +108,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to="/" className={cx('logo')}>
+                <Link to={routesConfig.home} className={cx('logo')}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
                 {/* Search */}
@@ -160,7 +161,7 @@ function Header() {
                     >
                         {currentUser ? (
                             <Image
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/f66a9971d2ad397edd4e8e905e19fb39.jpeg?lk3s=a5d48078&x-expires=1710554400&x-signature=Kw10xlI6B9Qr8YCu4NJH2wJfniw%3D"
+                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/c8922d6c6166e153c6cdcf7f80e3d5a8.jpeg?lk3s=a5d48078&x-expires=1710741600&x-signature=nQZp88mF5WfKxqBjyaBy58TJ2is%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
                             />

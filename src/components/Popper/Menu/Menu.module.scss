@@ -2,12 +2,16 @@
     width: 224px;
 
     .menu-item {
-        margin-left: 4px;
+        margin-left: 0;
     }
 }
 
 .menu-popper {
     padding-bottom: 8px;
+}
+
+.menu-body {
+    overflow-y: auto;
 }
 
 //Menu-Items
@@ -30,6 +34,7 @@
 //Header
 .header {
     position: relative;
+    flex-shrink: 0;
     height: 50px;
     margin-top: -8px;
 }
@@ -44,6 +49,6 @@
 .header-title {
     position: absolute;
     top: 50%;
-    left: 37%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
