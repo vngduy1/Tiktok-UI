@@ -16,7 +16,7 @@ import {
 
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
-import * as searchService from '~/apiService/searchService';
+import * as searchService from '~/service/searchService';
 
 const cx = classNames.bind(styles);
 

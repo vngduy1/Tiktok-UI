@@ -24,15 +24,16 @@ import { UploadIcon, InboxIcon, MessagesIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from './Search';
 import { Link } from 'react-router-dom';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
+
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
-        title: 'English',
+        title: 'Language',
         children: {
-            title: 'language',
+            title: 'Language',
             data: [
                 {
                     type: 'language',
@@ -62,7 +63,7 @@ const MENU_ITEMS = [
         title: 'Keyboard shortcuts',
     },
 ];
-//  className={cx('')}
+
 function Header() {
     const currentUser = true;
 
@@ -108,7 +109,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
                 {/* Search */}
@@ -146,13 +147,33 @@ function Header() {
                                 content={<span>Inbox</span>}
                                 placement="bottom"
                             >
-                                <InboxIcon />
+                                <div className={cx('inbox')}>
+                                    <InboxIcon />
+                                    <span className={cx('chat-messages')}>
+                                        4
+                                    </span>
+                                </div>
                             </Tippy>
                         </>
                     ) : (
                         <>
-                            <Button text>Upload</Button>
-                            <Button primary>Login</Button>
+                            <Tippy
+                                delay={[0, 200]}
+                                content={<span>Upload</span>}
+                                placement="bottom"
+                            >
+                                <button className={cx('action-btn')}>
+                                    <UploadIcon />
+                                    <span className="upload-btn"> Upload</span>
+                                </button>
+                            </Tippy>
+                            <Tippy
+                                delay={[0, 200]}
+                                content={<span>Login</span>}
+                                placement="bottom"
+                            >
+                                <Button primary>Login</Button>
+                            </Tippy>
                         </>
                     )}
                     <Menu
