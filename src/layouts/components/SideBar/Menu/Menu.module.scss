@@ -1,0 +1,42 @@
+.menu-item {
+    display: flex;
+    font-size: 1.8rem;
+    padding: 12px 8px;
+    font-weight: 700;
+    align-items: center;
+    border-radius: 4px;
+
+    &.active {
+        color: var(--primary);
+
+        .icon {
+            display: none;
+        }
+
+        .active-icon {
+            display: flex;
+        }
+    }
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.icon {
+    display: flex;
+}
+
+.active-icon {
+    display: none;
+}
+
+@media (max-width: 980px) {
+    .title {
+        display: none;
+    }
+}

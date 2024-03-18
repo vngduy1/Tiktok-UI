@@ -1,0 +1,27 @@
+.wrapper {
+    width: 356px;
+    padding: 20px 0 26px 8px;
+    margin-left: -18px;
+}
+
+@media (max-width: 739px) {
+    .wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 979px) {
+    .wrapper {
+        width: 72px;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+        border-right: 1px solid rgba(22, 24, 35, 0.12);
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1023px) {
+    .wrapper {
+        width: 30%;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+        border-right: 1px solid rgba(22, 24, 35, 0.12);
+    }
+}
