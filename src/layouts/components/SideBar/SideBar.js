@@ -87,7 +87,7 @@ function Sidebar() {
                     })}
             </Menu>
             <SuggestedAccount label="Suggested accounts" />
-            <SuggestedAccount label="Following accounts" />
+            {/* <SuggestedAccount label="Following accounts" /> */}
         </aside>
     );
 }
