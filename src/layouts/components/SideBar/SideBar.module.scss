@@ -1,7 +1,19 @@
+.container {
+    position: relative;
+    height: 100%;
+    width: 360px;
+}
+
 .wrapper {
-    width: 356px;
+    width: 300px;
     padding: 20px 0 26px 8px;
     margin-left: -18px;
+    top: 60px;
+    overflow: hidden auto;
+    overscroll-behavior-y: contain;
+    position: fixed;
+    z-index: 99;
+    height: 100%;
 }
 
 @media (max-width: 739px) {
@@ -11,6 +23,9 @@
 }
 
 @media (max-width: 979px) {
+    .container {
+        width: 100px;
+    }
     .wrapper {
         width: 72px;
         box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
