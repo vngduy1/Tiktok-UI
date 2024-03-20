@@ -1,0 +1,125 @@
+.wrapper {
+    display: flex;
+    position: relative;
+    width: 592px;
+    max-width: 592px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.avatar-link {
+    width: 56px;
+    height: 56px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.content-container {
+    margin-left: 12px;
+    width: 624px;
+    flex: 1 1 624px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    margin-right: 114px;
+    min-height: 70px;
+}
+
+.author {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-right: 4px;
+}
+
+.btn-follow {
+    right: 0px;
+    position: absolute;
+    top: 24px;
+}
+
+.title {
+    font-size: 1.6rem;
+    line-height: 4rem;
+}
+
+.video {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 100%;
+    margin: unset;
+}
+
+.video-container {
+    height: calc(316.667px + 17.3611vw);
+    border: 1px solid green;
+    width: 300px;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.btn-item {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6rem;
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 1.6rem;
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 0px;
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+    background-color: rgba(22, 24, 35, 0.06);
+    margin-top: 8px;
+    margin-bottom: 6px;
+    border-radius: 50%;
+}
+
+@media (max-width: 980px) {
+    .wrapper {
+        // width: 100%;
+        max-width: 100%;
+    }
+    .video-container {
+        width: 100%;
+    }
+    .video {
+        flex-direction: column;
+    }
+
+    .items {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 719px) {
+    .wrapper {
+        max-width: calc(100% - 24px);
+    }
+}

@@ -4,13 +4,14 @@ import styles from './SuggestedAccount.module.scss';
 import AccountItem from './AccountItem';
 
 const cx = classNames.bind(styles);
-function SuggestedAccount({ label }) {
+function SuggestedAccount({ label, data = [] }) {
     return (
         <div className={cx('wrapper')}>
             <p className={cx('label')}>{label}</p>
-            <AccountItem />
-            <AccountItem />
-            <AccountItem />
+            {data.length > 0 &&
+                data.map((account) => (
+                    <AccountItem key={account.id} data={account} />
+                ))}
             <p className={cx('more-btn')}>See more</p>
         </div>
     );
@@ -18,6 +19,7 @@ function SuggestedAccount({ label }) {
 
 SuggestedAccount.propTypes = {
     label: PropTypes.string.isRequired,
+    data: PropTypes.array,
 };
 
 export default SuggestedAccount;
