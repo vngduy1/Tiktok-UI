@@ -14,3 +14,13 @@ export const getSuggested = async ({ page, perPage }) => {
         console.log(error);
     }
 };
+
+export const getUserVideo = async ({ uuid }) => {
+    try {
+        //axios request
+        const res = await httpRequest.get(`/videos/${uuid}`);
+        return res.data;
+    } catch (error) {
+        console.log(error);
+    }
+};
