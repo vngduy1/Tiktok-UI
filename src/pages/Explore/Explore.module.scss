@@ -1,0 +1,22 @@
+.wrapper {
+}
+
+.category {
+    position: fixed;
+    z-index: 1;
+    height: 84px;
+    background: rgb(255, 255, 255);
+    transition: top 0.4s ease 0s;
+    width: calc(-336px + 100vw);
+}
+
+.category-container {
+    display: flex;
+    box-sizing: content-box;
+    overflow-x: auto;
+    height: 40px;
+    padding: 28px 0px 16px;
+    white-space: nowrap;
+    width: calc(-336px + 100vw);
+    min-width: unset !important;
+}

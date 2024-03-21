@@ -77,6 +77,19 @@
     }
 }
 
+.category {
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: 8px;
+    color: rgb(22, 24, 35);
+    cursor: pointer;
+    min-width: auto;
+
+    &:hover {
+        color: rgb(22, 24, 35);
+        background-color: rgba(22, 24, 35, 0.1);
+    }
+}
+
 .text {
     &:hover {
         text-decoration: underline;
